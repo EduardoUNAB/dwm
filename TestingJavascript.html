@@ -10,6 +10,7 @@
         <script>
             function saludar() {
                 alert("Hola a todos");
+                document.getElementById("texto").style.display="none";
             }
             function tecla(e) {
                 if (e.key=="Enter"){
@@ -17,6 +18,59 @@
                     alert("Enter presionado");
                 }
             }
+            let x,y,z;
+            x=10;
+            y=20;
+            z=x+y;
+            console.log("El valor de z es: "+z);
+            try {
+                console.log("Hola");
+                throw "Muy lento";
+
+            } catch (err) {
+                console.log(err);
+            }
+            console.log(typeof (z));
+            class Persona{}
+            const p = new Persona();
+            if (p instanceof Persona) {
+                console.log("Es una persona");
+            }
+            if (Math.random()>0.5) {
+                console.log("Cara");
+            } else {
+                console.log("Sello");
+            }
+
+            // Iteraciones
+            for (let i = 0; i < 5; i++) { //for i in range (5): print(i)
+                console.log(i);
+            }
+            let j=0;
+            while (j<5) {
+                console.log(j);
+                j++;
+            }
+            let k = 0;
+            do {
+                console.log(k);
+                k++;
+            } while (k<5);
+            const marcas = ["Toyota", "Chevrolet", "Ford", "Nissan", "Kia", "Hyundai"];
+            let l = 0;
+            let todasMarcas = "";
+            for(;marcas[l];) { // for marca in marcas: 
+                todasMarcas += marcas[l] + " ";
+                l++;
+            }
+            console.log(todasMarcas);
+            let m=0;
+            let tMarcas = "";
+            while (marcas[m]) {
+                tMarcas += marcas[m] + " ";
+                m++;
+            }
+            console.log(tMarcas);
         </script>
     </head>
     <body>
